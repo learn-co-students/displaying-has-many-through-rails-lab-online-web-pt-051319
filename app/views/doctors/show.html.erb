@@ -1,0 +1,9 @@
+<h1> <%= @doctor.name %>'s Appointments </h1>
+    <% @doctor.appointments.each do |appointment| %>
+    <li> Appointment with <%= link_to appointment.patient_name, patient_path(appointment.patient)%> on 
+         <%= link_to appointment.date_time, appointment_path(appointment) %>
+    </li>
+    <% end %>
+    <br>
+    <br>
+    <a href='/doctors'> Doctors Index </a>
