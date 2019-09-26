@@ -5,7 +5,7 @@ class PatientsController < ApplicationController
     end
 
     def show 
-        @patient = Patient.dind(params[:id])
+        @patient = Patient.find(params[:id])
     end
 
 end
