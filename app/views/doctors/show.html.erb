@@ -1,0 +1,10 @@
+<h3><%=@doctor.name%>'s appointments</h3>
+<% @doctor.appointments.each do |app| %>
+  <ul><li><%= app.appointment_datetime.strftime("%B %e, %Y at %k:%M") %></li></ul>
+  <% end %>
+<br>
+
+<h3><%=@doctor.name%>'s patients</h3>
+<% @doctor.patients.each do |p| %>
+  <ul><li><%= link_to p.name, patient_path(p)%></li></ul>
+  <% end %>
